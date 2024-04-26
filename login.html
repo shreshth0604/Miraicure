@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="miraicure logo.png">
+    <title>Login</title>
+  </head>
+  <style>
+   
+    * {
+      font-family: 'Segoe UI', Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #F8F8F8;
+    }
+
+    .main-container {
+      width: 100%;
+      height: 100%;
+      transition: 0.4s linear;
+    }
+
+    .box {
+      width: 800px;
+      height: 460px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #26567b;
+      padding: 40px;
+      box-sizing: border-box;
+      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    .box h2 {
+      margin: 0 0 30px;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 450;
+    }
+
+
+    .box p:nth-child(even) {
+      margin-top: 0;
+    }
+
+    .box a {
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .box .input-box {
+      position: relative;
+      font-size: 28px;
+    }
+
+    .box .input-box input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: #fff;
+      border: 1px solid #fff;
+      border: none;
+      border-bottom-style: solid;
+      outline: none;
+      letter-spacing: 1px;
+      background: transparent;
+    }
+
+    .box .input-box label {
+      position: absolute;
+      color: #fff;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+
+    .box .input-box input:focus ~ label,
+    .box .input-box input:valid ~ label {
+      top: -18px;
+      left: 0;
+      color: #f4f1ec;
+      font-size: 12px;
+    }
+
+    .box input[type="submit"] {
+      border: none;
+      outline: none;
+      background: white;
+      color: #013f62;
+      padding: 10px 30px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #logged-in {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      margin: auto;
+      position: absolute;
+      top: 50px;
+      display: none;
+    }
+
+    .login-true {
+      opacity: 0;
+    }
+
+    .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+    .btn-1,.btn-2 {
+    padding: 10px 5px;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #c4c4c4;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+    .btn-1 {
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid #ffffff;
+}    
+    .btn-2 {
+    background-color: #4f70b5;
+    color: white;
+    border: 2px solid #4f70b5;
+}
+  </style>
+
+  <body>
+    <div id="main" class="main-container">
+      <div class="box">
+        <h2>SIGN IN</h2>
+        <div class="btn">
+            <div class="btn-1">
+                <img src="https://img.icons8.com/color/30/000000/google-logo.png" /> Continue with Google
+            </div>
+            <div class="btn-2">
+                <img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" /> Continue with Facebook
+            </div>
+          </div>
+        <br>
+        <form id="form" action="{%url 'patient_detail' %}">
+          <div class="input-box">
+            <input id="user-name" type="text" name="" required="" />
+            <label>Username</label>
+          </div>
+          <div class="input-box">
+            <input id="user-pass" type="password" name="" required="" />
+            <label>Password</label>
+          </div>
+          <input id="submit" type="submit" name="" value="Login →" />
+        </form>
+      </div>
+    </div>
+
+    <div id="logged-in"></div>
+  </body>
+  <script>
+    
+  </script>
+</html>
